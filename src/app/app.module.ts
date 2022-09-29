@@ -12,8 +12,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
-
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { BoardComponent } from './board/board.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { AddTaskComponent } from './add-task/add-task.component';
 
 
 
@@ -21,7 +27,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SignUpComponent,
+    BoardComponent,
+    AddTaskComponent
 
 
   ],
@@ -35,7 +44,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    MatSidenavModule
+
 
 
 

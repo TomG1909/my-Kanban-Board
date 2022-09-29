@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Kanbanboard:build:production",
+            "firebaseProject": "kanban-board-407f3",
+            "firebaseHostingSite": "kanban-board-407f3"
+          }
         }
       }
     }

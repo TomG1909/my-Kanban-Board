@@ -1,4 +1,18 @@
 
-<div class="content">
-<router-outlet></router-outlet>
-</div>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <ul class="menu-container">
+            <li>add Task</li>
+            <li routerLink="/board" routerLinkActive="active">Board</li>
+            <li>Backlog</li>
+            <li>Help</li>
+        </ul>
+    </mat-drawer>
+    <mat-drawer-content>
+        
+        <router-outlet></router-outlet>
+
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
+

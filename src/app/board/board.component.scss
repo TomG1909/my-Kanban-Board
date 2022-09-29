@@ -1,0 +1,49 @@
+mat-toolbar {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    span {
+        color: white;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.root {
+    display: flex;
+    height: calc(100% - 64px);
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    min-width: 0;
+    min-height: 0;
+
+    .board-wrapper {
+        display: flex;
+        flex-grow: 1;
+
+
+        .board-columns {
+            display: flex;
+            flex-grow: 1;
+            overflow-x: auto;
+
+            .board-column {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                flex-basis: 0;
+                max-width: 300px;
+                margin: 50px;
+                padding: 25px;
+                background-color: rgba(225, 225, 225, 0.3);
+            }
+        }
+    }
+}
